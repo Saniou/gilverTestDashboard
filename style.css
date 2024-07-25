@@ -39,7 +39,7 @@ body{
     width: 100vh;
     height: 100vh;
     font-family: poppins, sans-serif;
-    background: #FAFBFF
+    background: #FAFBFF;
     user-select: none;
     overflow-x: hidden;
     display: flex;
