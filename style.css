@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --color-primary: #5932EA;
+    --color-danger: #ff7782;
+    --color-success: #41f1b6;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --color-dark: #363949;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-primary-variant: #111e88;
+    --color-dark-variant: #677483;
+    --color-background: #bfc1cc;
+    
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+    
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    
+    --box-shadow: 0 2rem 3rem var(--color-light);
+  }
+  
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vh;
+    height: 100vh;
+    font-family: poppins, sans-serif;
+    background: #FAFBFF
+    user-select: none;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.container{
+    display: flex;
+    width: 306px;
+    background: white;
+    gap: 70px;
+}
+
+a{
+    color: var(--color-dark)
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 26px;
+}
+
+h2{
+    font-size: 26px;
+}
+
+h3{
+    font-size: 14px;
+}
+
+h4{
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+
+small{
+    font-size: 0.76rem;
+}
+
+p{
+    color: var(--color-dark-variant)
+}
+
+b{
+    color: var(--color-dark)
+}
+
+.primary{
+    color: var(--color-primary)
+}
+
+.active{
+    color: var(--color-success)
+}
+
+aside{
+    background: #EEEEEE
+}
+
+aside .top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+
+aside .logo{
+    display: flex;
+    gap: 5px;
+    margin-left: 2rem;
+}
+
+aside .close{
+    display: none;
+}
+
+aside .logo img {
+    width: 37px
+}
+
+aside .sidebar{
+    background: #EEEEEE;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside .sidebar a img {
+    width: 24px;
+}
+
+aside .sidebar a{
+    width: 250px;
+    border-radius: 15px; 
+    padding: 10px;
+
+}
+
+aside h3 {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0; 
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar h3 span{
+    width: 16px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 2rem;
+    width: 180px;
+}
+
+aside .sidebar a:last-child h3 {
+    font-weight: 800;
+    font-size: 14px;
+    color: var(--color-dark)
+}
+
+aside .sidebar a:last-child h4 {
+    font-size: 12px;
+}
+
+aside .sidebar a:last-child img {
+    width: 42px;
+}
+
+aside .sidebar a:hover  {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+main{
+    width: 1500px;
+}
+
+.welcomeSection{
+    margin: 20px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.allOrdersBlock {
+    background: #EEEEEE;
+    padding: 55px;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 0.2s ease;
+}
+  
+.allOrdersBlock:hover {
+    box-shadow: none;
+}
+  
+.allOrdersBlock h2 {
+    margin-bottom: 20px;
+}
+  
+.allOrdersBlock table {
+    width: 1200px;
+    color: var(--color-dark-variant);
+}
+  
+.allOrdersBlock table thead th,
+.allOrdersBlock table tbody td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-info-light);
+    color: black;
+}
+   
+.allOrdersBlock table tbody td.active .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 29px;
+    border: 1px solid #00B087;
+    border-radius: 5px;
+    background-color: var(--color-success);
+    color: #00B087;
+    font-size: 0.875rem;
+}
+
+.allOrdersBlock table tbody td.inactive .badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 29px;
+    border: 1px solid #DF0404;
+    border-radius: 5px;
+    background-color: #FFC5C5;
+    color: #DF0404;
+    font-size: 0.875rem;
+}
+  
+.allOrdersBlock p {
+    text-align: start;
+    margin-top: 50px;
+    color: var(--color-dark-variant);
+}
+
+.paginationBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+  
+.pagination {
+    display: inline-block;
+    margin-top: 20px;
+}
+  
+.pagination a {
+    color: black;
+    float: left;
+    width: 25px;
+    height: 24px;
+    margin: 5px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+  
+.pagination a.active {
+    background-color: var(--color-primary);
+    color: white;
+}
+  
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+    width: 25px;
+    height: 24px;
+    margin: 5px;
+}
+  
+.pagination .ellipsis {
+    float: left;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color .3s;
+    border-radius: 5px;
+    width: 25px;
+    height: 24px;
+    margin: 5px;
+}
+
+.containerHead {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+.link {
+    color: #11b2a2;
+    text-decoration: none;
+}
+  
+.search-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+    width: 216px;
+    height: 38px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #F9FBFF;
+}
+  
+.search-icon {
+    float: left;
+    color: #999;
+    margin-right: 10px;
+}
+  
+.search-input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+  
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .sidebar a {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  
+  .sidebar a.show {
+    animation: slideIn 0.5s forwards;
+  }
+  
+  aside {
+    height: 100vh;
+    background: white;
+  }
+  
+  aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+  }
+  
+  aside .logo {
+    display: flex;
+    gap: 5px;
+    margin-left: 2rem;
+  }
+  
+  aside .close {
+    display: none;
+  }
+  
+  aside .logo img {
+    width: 37px;
+  }
+  
+  aside .sidebar {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+  }
+  
+  aside .sidebar a img {
+    width: 24px;
+  }
+  
+  aside h3 {
+    font-weight: 500;
+  }
+  
+  aside .sidebar a {
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+  }
+  
+  aside .sidebar h3 span {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 0%;
+        grid-template-columns: 14rem auto 23rem;
+    }
+    aside .top .logo {
+        padding-right: 20px;
+    }
+    aside .sidebar a:last-child {
+        position: relative; 
+        margin-top: 1.8rem;
+        display: flex;
+        width: 60px;
+        justify-content: center;
+        align-items:center
+    }
+    aside .top h2{
+        display: none;
+    }
+    aside .sidebar h3 {
+        display: none;
+    }
+    aside .sidebar h4 {
+        display: none;
+    }
+    aside .sidebar a{
+        width: 10%;
+    }
+    aside .sidebar a:hover  {
+        background: var(--color-primary);
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        color: var(--color-white);
+    }
+    main{
+        width: 1000px;
+        margin-bottom: -50px;
+    }
+    .welcomeSection{
+        margin: 5px;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .allOrdersBlock {
+        background: var(--color-white);
+        padding: 10px;
+        border-radius: var(--card-border-radius);
+        box-shadow: var(--box-shadow);
+        transition: all 0.2s ease;
+    } 
+    .allOrdersBlock:hover {
+        box-shadow: none;
+    }
+    .allOrdersBlock h2 {
+        margin-bottom: 10px;
+    }
+    .allOrdersBlock table {
+        width: 400px;
+    }
+    .allOrdersBlock table thead,
+    .allOrdersBlock table tbody  {
+        padding: 15px;
+        text-align: center;
+        font-size: 10px;
+    }
+    .allOrdersBlock table tbody td.active .badge {
+        width: 40px;
+        font-size: 9px;
+    }
+    .allOrdersBlock table tbody td.inactive .badge {
+        width: 40px;
+        font-size: 9px;
+    }
+    .allOrdersBlock p {
+        text-align: start;
+        margin-top: 50px;
+    }
+    .link{
+        font-size: 15px;
+    }
+    .title{
+        font-size: 15px;
+    }
+    .search-container{
+        width: 15px;
+    }
+    .paginationBlock p {
+        font-size: 10px;
+    }
+    .pagination a {
+        margin: 2px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
